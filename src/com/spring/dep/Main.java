@@ -17,7 +17,7 @@ public class Main {
 		// retrieve bean from spring container
 		Userinterface user = context.getBean("user",Userinterface.class);
 		// call methods on the bean
-		user.start();
+		user.getPerson();
 //		// retrieve bean from spring container
 //		Personinterface person = context.getBean("person",Personinterface.class);
 //		// call methods on the bean

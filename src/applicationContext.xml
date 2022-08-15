@@ -12,6 +12,7 @@
     </bean> -->
     
       <bean id="user" class="com.spring.dep.User">
+      <constructor-arg ref="person"> </constructor-arg>
     </bean>
     
       <bean id="person" class="com.spring.dep.person">
