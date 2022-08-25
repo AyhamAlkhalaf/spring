@@ -14,6 +14,14 @@ public class Main {
 		user.setPerson(person);
 		user.getPerson();
 		*/
+		/*
+		User user= new User();
+		user.setEmail("ayham.ayham909@gmail.com");
+		user.setTeam("ICBC" );
+		System.out.println(user.getEmail());
+		System.out.println(user.getTeam());
+		*/
+		
 		
 //       spring		
 		// load the spring configuration file
@@ -22,7 +30,7 @@ public class Main {
 //		// retrieve bean from spring container
 		Userinterface user = context.getBean("user",Userinterface.class);
 		// call methods on the bean
-		user.getPerson();
+		System.out.println(user.getEmail() + "  " + user.getTeam());
 //		// retrieve bean from spring container
 //		Personinterface person = context.getBean("person",Personinterface.class);
 //		// call methods on the bean
@@ -30,7 +38,7 @@ public class Main {
 		
 		
 		// close the context
-		context.close();
+//		context.close();
 	
 
 	}
