@@ -6,15 +6,20 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		/*
+		 * java 
+		 * 
+		person person =new person();
+		User user = new User();
+		user.setPerson(person);
+		user.getPerson();
+		*/
 		
-//		person person =new person();
-//		User user = new User(person);
-//		user.getPerson();
-		
+//       spring		
 		// load the spring configuration file
 		ClassPathXmlApplicationContext context = 
 				new ClassPathXmlApplicationContext("applicationContext.xml");
-		// retrieve bean from spring container
+//		// retrieve bean from spring container
 		Userinterface user = context.getBean("user",Userinterface.class);
 		// call methods on the bean
 		user.getPerson();

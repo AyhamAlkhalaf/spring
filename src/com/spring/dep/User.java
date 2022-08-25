@@ -4,12 +4,13 @@ public class User implements Userinterface {
 	
 	
 	private Personinterface person;
+
 	
-	public User(Personinterface person) {
-		// TODO Auto-generated constructor stub
-		this.person = person;
+	public void setPerson(Personinterface person) {
+		
+		this.person = person; 
+		
 	}
-	
 	
 	@Override
 	public void getPerson(){
