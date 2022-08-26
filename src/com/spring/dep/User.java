@@ -51,5 +51,19 @@ public class User implements Userinterface {
 		System.out.println("i am user");
 		
 	}
+	
+	
+	
+	
+	public void doStart() {
+		System.out.println("Start");
+		
+		
+	}
+	
+	public void doEnd() {
+		System.out.println("End");
+		
+	}
 
 }

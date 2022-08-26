@@ -21,8 +21,16 @@
 
 		<context:property-placeholder location="classpath:data.properties" />
 
+<!-- نوع البين سنغل تون يعطيك نفس البيت اذا انشات بروجكت جديد اما اذا كان بروتو تايب ينشا بين جديدة لكل اوبجكت  -->
 
-		 <bean id="user" class="com.spring.dep.User" scope="prototype">
+		 <bean 
+		 id="user"
+		 class="com.spring.dep.User"
+		 scope="singleton"
+		 init-method="doStart"
+		 destroy-method="doEnd"
+		   
+		   >
 		 <property name="person" ref="person" ></property>
 		 <property name="email" value="${us.email}"></property>
 		 <property name="team" value= "${us.team} "></property>
