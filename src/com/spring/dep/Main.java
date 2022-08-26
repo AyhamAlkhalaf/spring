@@ -29,8 +29,13 @@ public class Main {
 				new ClassPathXmlApplicationContext("applicationContext.xml");
 //		// retrieve bean from spring container
 		Userinterface user = context.getBean("user",Userinterface.class);
+		Userinterface user1 = context.getBean("user",Userinterface.class);
+		Userinterface user2 = context.getBean("user",Userinterface.class);
 		// call methods on the bean
-		System.out.println(user.getEmail() + "  " + user.getTeam());
+		System.out.println(user1 == user2);
+		System.out.println(user1.getEmail() + "  " + user1.getTeam());
+		System.out.println(user2.getEmail() + "  " + user2.getTeam());
+//		System.out.println(user.getEmail() + "  " + user.getTeam());
 //		// retrieve bean from spring container
 //		Personinterface person = context.getBean("person",Personinterface.class);
 //		// call methods on the bean
