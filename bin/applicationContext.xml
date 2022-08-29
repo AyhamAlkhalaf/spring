@@ -7,41 +7,51 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-  
-<!--     <bean id="mySport" class="com.spring.Basketball"> -->
-<!--     </bean> -->
-    
-<!--       <bean id="user" class="com.spring.dep.User"> -->
-<!--       <constructor-arg ref="person"> </constructor-arg> -->
-<!--     </bean> -->
-    
-<!--       <bean id="person" class="com.spring.dep.person"> -->
-<!--     </bean> -->
-
-
-		<context:property-placeholder location="classpath:data.properties" />
-
-<!-- نوع البين سنغل تون يعطيك نفس البيت اذا انشات بروجكت جديد اما اذا كان بروتو تايب ينشا بين جديدة لكل اوبجكت  -->
-
-		 <bean 
-		 id="user"
-		 class="com.spring.dep.User"
-		 scope="singleton"
-		 init-method="doStart"
-		 destroy-method="doEnd"
-		   
-		   >
-		 <property name="person" ref="person" ></property>
-		 <property name="email" value="${us.email}"></property>
-		 <property name="team" value= "${us.team} "></property>
-		 
-  		 </bean>
-  		 <bean id="person" class="com.spring.dep.person">
-    	</bean>
-
-
-
-    
-    
+     <context:component-scan base-package="com.spring.ann"></context:component-scan>
     
 </beans>
+
+
+
+
+
+
+
+
+<!--     <bean id="mySport" class="com.spring.Basketball">
+
+    </bean> 
+    
+      <bean id="user" class="com.spring.dep.User"> 
+      <constructor-arg ref="person"> </constructor-arg>
+   </bean> 
+    
+      <bean id="person" class="com.spring.dep.person">
+    </bean> 
+
+
+ 		<context:property-placeholder location="classpath:data.properties" /> 
+
+
+ نوع البين سنغل تون يعطيك نفس البيت اذا انشات بروجكت جديد اما اذا كان بروتو تايب ينشا بين جديدة لكل اوبجكت 
+ في حالة البروتو تايب البين ما بتخلص وما بتظهر ميثود ال end
+		 
+		 
+		 <bean  
+		 id="user" 
+ 		 class="com.spring.dep.User" 
+ 		 scope="singleton" 
+ 		 init-method="doStart" 
+		 destroy-method="doEnd" 
+		   
+ 		   
+		 <property name="person" ref="person" ></property> 
+		 <property name="email" value="${us.email}"></property> 
+ 		 <property name="team" value= "${us.team} "></property> 
+		 
+   		 </bean> 
+   		 <bean id="person" class="com.spring.dep.person">
+     	</bean> 
+    	
+     	  -->
+
