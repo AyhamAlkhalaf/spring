@@ -11,10 +11,11 @@ public class Mainapp {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 //		 retrieve bean from spring container
 
-		MasterInterface ms =context.getBean("master",MasterInterface.class);
+//		CompanyInerface ci =context.getBean("client",CompanyInerface.class);
+		MasterInterface  ms=context.getBean("master",MasterInterface.class);
 		// call methods on the bean
 
-		ms.callMysport();
+		ms.name();
 		
 		// close the context
 		context.close();
