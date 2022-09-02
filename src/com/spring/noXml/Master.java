@@ -4,18 +4,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Master implements MasterInterface{
-		
-	
-	
-	
-	@Autowired
-	@Qualifier("football")
-     private SportInsterface  sp;
+
+
+
+
+	//	@Autowired
+	//	@Qualifier("football")
+	private SportInsterface  sp;
+   
 	
 	
 
+	public Master(SportInsterface sp) {
+
+		this.sp = sp;
+	}
 
 
 	@Override
@@ -30,9 +35,9 @@ public class Master implements MasterInterface{
 	@Override
 	public void getSport() {
 		// TODO Auto-generated method stub
-		
+
 		sp.MySport();
-		
+
 	}
 
 }

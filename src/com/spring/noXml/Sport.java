@@ -2,7 +2,7 @@ package com.spring.noXml;
 
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Sport  implements SportInsterface{
 
 	@Override
