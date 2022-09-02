@@ -16,17 +16,10 @@ public class MainApp {
 
 		PersonInterface  admin1=context.getBean("admin",PersonInterface.class);
 		
-//		 retrieve bean from spring container
-
-		PersonInterface  admin2=context.getBean("admin",PersonInterface.class);
-		
 		
 		// call methods on the bean
-		System.out.println(admin1);
+		admin1.Name();
 		
-		System.out.println(admin2);
-		
-		System.out.println(admin1 == admin2);
 		
 		
 		
