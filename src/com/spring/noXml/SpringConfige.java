@@ -3,9 +3,11 @@ package com.spring.noXml;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-//@ComponentScan("com.spring.noXml")
+@PropertySource("classpath:data.properties")
+@ComponentScan("com.spring.noXml")
 public class SpringConfige {
 	
 	
