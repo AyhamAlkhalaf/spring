@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 @Component
 //@Scope("prototype")
 public class Admin implements PersonInterface {
+	
+	
 	@PostConstruct
 	public void init() {
 		
@@ -25,6 +27,8 @@ public class Admin implements PersonInterface {
 		System.out.println("i am admin");
 		
 	}
+	
+	
 	
 	@PreDestroy
 	public void destroy() {
